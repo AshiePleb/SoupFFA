@@ -1,0 +1,7 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Jackaboi18/SoupFFA
+branches:
+- master
+projects:
+  SoupFFA:
+    path: ""
+...
