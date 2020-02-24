@@ -1,6 +1,6 @@
-main: Jackaboi\SoupFFA\Main
+main: AshleyHunter01\SoupFFA\Main
 name: SoupFFA
 api: 3.0.0
-version: 1.0.1
-author: Jackaboi
+version: 1.0.2
+author: Jackypoo
 description: A simple SoupFFA plugin then when you right-click on soup you regenerate 3 and a half hearts!
