@@ -1,6 +1,6 @@
 name: SoupFFA
-version: 2.0.0
+version: 2.0.1
 api: 4.0.0
 main: AshiePleb\SoupFFA\Main
 author: AshiePleb
-description: SoupFFA allows players to instantly regenerate 3.5 hearts of health by right-clicking on soup or stew items. This plugin enhances the PvP experience by allowing players to focus on the battle instead of worrying about their health.
+description: SoupFFA lets players quickly heal by right-clicking soup, improving PvP by reducing health concerns during battles.
