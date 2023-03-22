@@ -1,0 +1,12 @@
+# To enable or disable the plugin in certain worlds, add their names to the 'enabled-worlds' list below. SoupFFA will only work in worlds that are listed.
+# You can add as many worlds as you like to the list.
+
+enabled-worlds:
+  - world
+  - world1
+  - world2
+  - world3
+
+# This is the config version. Do not change this.
+# This corresponds to the plugin version.
+config-version: 2.0.0
