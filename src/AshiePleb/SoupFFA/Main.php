@@ -41,14 +41,16 @@ class Main extends PluginBase implements Listener {
 
     public function handleInteract(PlayerInteractEvent $event): void {
         $player = $event->getPlayer();
-        $world = $player->getWorld();
+        $worldName = $player->getWorld()->getFolderName();
 
-        if(!$this->isEnabledInWorld($world)) {
+        if(!in_array($worldName, $this->enabledWorlds, true)) {
             return;
         }
 
         $item = $event->getItem();
-        $isSoup = $this->isSoupItem($item);
+        $isSoup = $item->getId() === Item::MUSHROOM_STEW
+            || $item->getId() === Item::RABBIT_STEW
+            || $item->getId() === Item::BEETROOT_SOUP;
 
         if(!$isSoup) {
             return;
@@ -68,16 +70,5 @@ class Main extends PluginBase implements Listener {
 
         $player->getInventory()->setItemInHand(VanillaItems::AIR());
         $player->setHealth($health + $this->healthRegen);
-    }
-
-    private function isEnabledInWorld(World $world): bool {
-        $worldName = $world->getFolderName();
-        return in_array($worldName, $this->enabledWorlds, true);
-    }
-
-    private function isSoupItem(Item $item): bool {
-        return $item->getId() === VanillaItems::MUSHROOM_STEW
-            || $item->getId() === VanillaItems::RABBIT_STEW
-            || $item->getId() === VanillaItems::BEETROOT_SOUP;
     }
 }
