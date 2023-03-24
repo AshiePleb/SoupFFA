@@ -36,7 +36,7 @@ class Main extends PluginBase implements Listener {
                     $event->getItem()->equals(VanillaItems::BEETROOT_SOUP())) {
                     if ($player->getGamemode() === GameMode::SURVIVAL() || $player->getGamemode() === GameMode::ADVENTURE()) {
                         if ($player->getHealth() != $player->getMaxHealth()) {
-                            $player->getInventory()->setItemInHand(VanillaItems::AIR());
+                            $player->getInventory()->setItemInHand(VanillaItems::AIR()->asItem());
                             $player->setHealth($player->getHealth() + $this->healthRegen);
                         } else {
                             $player->sendPopup(TextFormat::colorize($this->fullHealthMessage));
