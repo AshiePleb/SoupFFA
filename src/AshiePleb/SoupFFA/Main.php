@@ -8,6 +8,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\item\VanillaItems;
 use pocketmine\utils\TextFormat;
 use pocketmine\player\GameMode;
+use pocketmine\block\VanillaBlocks;
 
 class Main extends PluginBase implements Listener {
     private $enabledWorlds;
@@ -36,7 +37,7 @@ class Main extends PluginBase implements Listener {
                     $event->getItem()->equals(VanillaItems::BEETROOT_SOUP())) {
                     if ($player->getGamemode() === GameMode::SURVIVAL() || $player->getGamemode() === GameMode::ADVENTURE()) {
                         if ($player->getHealth() != $player->getMaxHealth()) {
-                            $player->getInventory()->setItemInHand(VanillaItems::AIR()->asItem());
+                            $player->getInventory()->setItemInHand(VanillaBlocks::AIR()->asItem());
                             $player->setHealth($player->getHealth() + $this->healthRegen);
                         } else {
                             $player->sendPopup(TextFormat::colorize($this->fullHealthMessage));
