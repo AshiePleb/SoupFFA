@@ -67,7 +67,7 @@ class Main extends PluginBase implements Listener {
             return;
         }
 
-        $player->getInventory()->setItemInHand(VanillaItems::AIR());
-        $player->setHealth($health + $this->healthRegen);
+        $player->getInventory()->setItemInHand(VanillaItems::get(VanillaItems::AIR)->setCount(1));
+        $player->setHealth($health + $this->healthRegen);   
     }
 }
