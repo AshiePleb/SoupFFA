@@ -19,11 +19,19 @@ class Main extends PluginBase implements Listener {
     private string $fullHealthMessage = '';
     private string $configVersion = '';
 
+    // =============================
+    //        PLUGIN ENABLE
+    // =============================
+    
     public function onEnable(): void {
         $this->loadConfig();
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
+
+    // =============================
+    //      LOAD PLUGIN CONFIG
+    // =============================
 
     private function loadConfig(): void {
         $config = $this->getConfig();
@@ -37,6 +45,10 @@ class Main extends PluginBase implements Listener {
             $this->getLogger()->warning("You're using an outdated version of the plugin, please head over to the plugin page to download the latest version.");
         }
     }
+
+    // =============================
+    //        SOUP INTERACT
+    // =============================
 
     public function handleInteract(PlayerInteractEvent $event): void {
         $player = $event->getPlayer();
@@ -67,7 +79,7 @@ class Main extends PluginBase implements Listener {
             return;
         }
 
-        $player->getInventory()->setItemInHand(VanillaItems::get(VanillaItems::AIR)->setCount(1));
-        $player->setHealth($health + $this->healthRegen);   
+        $player->getInventory()->setItemInHand(VanillaItems::AIR());
+        $player->setHealth($health + $this->healthRegen);
     }
 }
