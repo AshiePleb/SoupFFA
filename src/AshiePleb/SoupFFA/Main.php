@@ -11,7 +11,6 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\item\VanillaItems;
 use pocketmine\utils\TextFormat;
 use pocketmine\player\GameMode;
-use pocketmine\world\World;
 
 class Main extends PluginBase implements Listener {
 
@@ -48,9 +47,9 @@ class Main extends PluginBase implements Listener {
         }
 
         $item = $event->getItem();
-        $isSoup = $item->getId() === Item::MUSHROOM_STEW
-            || $item->getId() === Item::RABBIT_STEW
-            || $item->getId() === Item::BEETROOT_SOUP;
+        $isSoup = $item->getId() === VanillaItems::MUSHROOM_STEW()->getId()
+            || $item->getId() === VanillaItems::RABBIT_STEW()->getId()
+            || $item->getId() === VanillaItems::BEETROOT_SOUP()->getId();
 
         if(!$isSoup) {
             return;
