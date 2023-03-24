@@ -1,4 +1,8 @@
+
 # SoupFFA
+
+[![](https://poggit.pmmp.io/shield.state/SoupFFA)](https://poggit.pmmp.io/p/SoupFFA)
+[![](https://poggit.pmmp.io/shield.dl.total/SoupFFA)](https://poggit.pmmp.io/p/SoupFFA)
 
 SoupFFA is a plugin designed to regenerate 3.5 hearts in Minecraft when players right-click on soup. This plugin is especially useful in Free-for-all (FFA) battles or PvP situations where players need to regenerate their health quickly during a fight.
 
@@ -23,6 +27,22 @@ enabled-worlds:
   - world2
   - world3
 ```
+
+This is the amount of health that will be restored when a player drinks a soup.
+
+The default value is 3.5, which is the same as a golden apple.
+```yaml
+health-regen: 3.5
+```
+
+This is the message that will be displayed to the player when they drink a soup but are already at full health.
+```yaml
+full-health-message: "&aYou are already at full health!"
+```
+
+## Support
+
+If you have any questions or issues, feel free to contact me on my [Discord server](https://discord.gg/SM7xE3pSK8), alternatively you can open an issue on the [GitHub repository](https://github.com/AshiePleb/SoupFFA/issues) and I will try respond as soon as possible.
 
 ## Contributors
 

@@ -7,6 +7,13 @@ enabled-worlds:
   - world2
   - world3
 
+# This is the amount of health that will be restored when a player drinks a soup.
+# The default value is 3.5, which is the same as a golden apple.
+health-regen: 3.5
+
+# This is the message that will be displayed to the player when they drink a soup but are already at full health.
+full-health-message: "&aYou are already at full health!"
+
 # This is the config version. Do not change this.
 # This corresponds to the plugin version.
-config-version: 2.0.1
+config-version: 2.1.0
