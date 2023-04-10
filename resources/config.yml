@@ -16,4 +16,4 @@ full-health-message: "&aYou are already at full health!"
 
 # This is the config version. Do not change this.
 # This corresponds to the plugin version.
-config-version: 2.1.0
+config-version: 2.2.0

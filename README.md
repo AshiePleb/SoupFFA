@@ -49,3 +49,4 @@ If you have any questions or issues, feel free to contact me on my [Discord serv
 I would like to thank the following people for their contributions to this project:
 
 - [HBIDamian](https://github.com/HBIDamian)
+- [Henry8K](https://github.com/Henry8K)

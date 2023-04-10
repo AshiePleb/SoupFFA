@@ -11,6 +11,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\item\VanillaItems;
 use pocketmine\utils\TextFormat;
 use pocketmine\player\GameMode;
+use pocketmine\block\VanillaBlocks;
 
 class Main extends PluginBase implements Listener {
 
@@ -18,20 +19,12 @@ class Main extends PluginBase implements Listener {
     private array $enabledWorlds = [];
     private string $fullHealthMessage = '';
     private string $configVersion = '';
-
-    // =============================
-    //        PLUGIN ENABLE
-    // =============================
     
     public function onEnable(): void {
         $this->loadConfig();
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
-
-    // =============================
-    //      LOAD PLUGIN CONFIG
-    // =============================
 
     private function loadConfig(): void {
         $config = $this->getConfig();
@@ -45,10 +38,6 @@ class Main extends PluginBase implements Listener {
             $this->getLogger()->warning("You're using an outdated version of the plugin, please head over to the plugin page to download the latest version.");
         }
     }
-
-    // =============================
-    //        SOUP INTERACT
-    // =============================
 
     public function handleInteract(PlayerInteractEvent $event): void {
         $player = $event->getPlayer();
@@ -79,7 +68,7 @@ class Main extends PluginBase implements Listener {
             return;
         }
 
-        $player->getInventory()->setItemInHand(VanillaItems::AIR());
+        $player->getInventory()->setItemInHand(VanillaBlocks::AIR()->asItem());
         $player->setHealth($health + $this->healthRegen);
     }
 }
