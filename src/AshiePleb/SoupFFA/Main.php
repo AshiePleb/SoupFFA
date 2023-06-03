@@ -48,9 +48,9 @@ class Main extends PluginBase implements Listener {
         }
 
         $item = $event->getItem();
-        $isSoup = $item->getId() === VanillaItems::MUSHROOM_STEW()->getId()
-            || $item->getId() === VanillaItems::RABBIT_STEW()->getId()
-            || $item->getId() === VanillaItems::BEETROOT_SOUP()->getId();
+        $isSoup = $item->getTypeId() === VanillaItems::MUSHROOM_STEW()->getTypeId()
+            || $item->getTypeId() === VanillaItems::RABBIT_STEW()->getTypeId()
+            || $item->getTypeId() === VanillaItems::BEETROOT_SOUP()->getTypeId();
 
         if(!$isSoup) {
             return;

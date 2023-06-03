@@ -12,7 +12,7 @@ SoupFFA is easy to install and use and works seamlessly with other plugins on yo
 
 Overall, SoupFFA is a must-have plugin for any Minecraft server that features PvP gameplay. It's a great addition to any server that wants to make the game more enjoyable and engaging for players.
 
-To download SoupFFA, simply head to the [release tab](https://github.com/AshiePleb/SoupFFA/releases/latest) and download the latest version. This plugin is compatible with PocketMine-MP API4 and is regularly updated to ensure optimal performance. Don't wait – take your Minecraft server to the next level and download SoupFFA today!
+To download SoupFFA, simply head to the [release tab](https://github.com/AshiePleb/SoupFFA/releases/latest) and download the latest version. This plugin is compatible with PocketMine-MP API5 and is regularly updated to ensure optimal performance. Don't wait – take your Minecraft server to the next level and download SoupFFA today!
 
 ## Config
 

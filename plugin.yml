@@ -1,6 +1,6 @@
 name: SoupFFA
-version: 2.2.0
-api: 4.0.0
+version: 2.3.0
+api: 5.0.0
 main: AshiePleb\SoupFFA\Main
 author: AshiePleb
 description: SoupFFA lets players quickly heal by right-clicking soup, improving PvP by reducing health concerns during battles.
